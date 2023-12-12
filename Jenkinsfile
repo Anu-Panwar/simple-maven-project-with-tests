@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                git 'https://github.com/adithnaveen/simple-maven-project-with-tests'
+                git 'https://github.com/Anu-Panwar/simple-maven-project-with-tests.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
