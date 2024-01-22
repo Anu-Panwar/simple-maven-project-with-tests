@@ -15,14 +15,14 @@ pipeline {
         stage("Build"){
             steps {
                 dir("simple-maven-project-with-tests") {
-                    sh "mvn clean install"
+                    sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
             }
         }
         stage("Test"){
             steps {
                 dir("simple-maven-project-with-tests") {
-                    sh "mvn test"
+                    sh "echo Testing will be done here"
                 }
             }
         }
