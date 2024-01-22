@@ -20,9 +20,9 @@ pipeline {
         }
         stage("Build"){
             steps {
-                dir("simple-maven-project-with-tests") {
-                    bat "mvn clean install"
-                }
+               
+                    sh "mvn clean install"
+                
             }
         }
     }
