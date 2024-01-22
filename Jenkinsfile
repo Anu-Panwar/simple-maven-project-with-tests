@@ -8,16 +8,9 @@ pipeline {
     }
 
     stages {
-         stage("Clean Up"){
+         stage("Test"){
             steps {
-                deleteDir()
-            }
-        }
-        stage("Build"){
-            steps {
-               
-                    bat "mvn clean install"
-                
+               bat "echo test"
             }
         }
     }
