@@ -16,7 +16,8 @@ pipeline {
                 dir('simple-maven-project-with-tests'){
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean install"
+                // sh "mvn clean install"
+                    bat "mvn clean install"
                 }
 
                 // To run Maven on a Windows agent, use
